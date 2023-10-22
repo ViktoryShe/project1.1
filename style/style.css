@@ -1,0 +1,389 @@
+/*Обнуление*/
+*,
+*::before,
+*::after {
+ padding: 0;
+ margin: 0;
+ border: 0;
+ box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+ul,
+ol,
+li {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+/*-----------------Шрифты--------------------------------------------------*/
+
+@font-face {
+    font-family: 'TTLakesMed';
+    src: url('../fonts/TTLakes-Medium.eot');
+    src: local('TT Lakes Medium'), local('TTLakes-Medium'),
+        url('../fonts/TTLakes-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTLakes-Medium.woff') format('woff'),
+        url('../fonts/TTLakes-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'TTLakesReg';
+    src: url('../fonts/TTLakes-Regular.eot');
+    src: local('TT Lakes Regular'), local('TTLakes-Regular'),
+        url('../fonts/TTLakes-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTLakes-Regular.woff') format('woff'),
+        url('../fonts/TTLakes-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'TTLakesBold';
+    src: url('../fonts/TTLakes-Bold.eot');
+    src: local('TT Lakes Bold'), local('TTLakes-Bold'),
+        url('../fonts/TTLakes-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTLakes-Bold.woff') format('woff'),
+        url('../fonts/TTLakes-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+/*-----------------------------------------------------------------------*/
+html, body {
+    height: 100%;
+}
+body {
+    font-size: 16px;
+    color: black;
+    font-family: 'TTLakesReg', 'TTLakesMed','TTLakesBold';
+}
+.wrapper {
+    width: 320px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 2px 0 50px 0px #7E7E82;
+}
+/*------------------------------------------------------------------------*/
+[class*="__container"] {
+    max-width: auto;
+    margin: 0px auto;
+}
+/*--------шапка----------------------------------------------------------------*/
+.header {
+    width: 100%;
+    left: 0px;
+    top: 0;
+}
+.header__container {
+    display: flex;
+    align-items: center;
+    min-height: 80px;
+}
+.header_esc {
+    width: 40px;
+    height: 40px;
+    margin-left: 20px;
+    background-image: url("../img/esc.svg");
+    background-repeat: no-repeat;
+}
+.header_esc:hover {
+    transition: transform 1s;
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+.header_search {
+    width: 40px;
+    height: 40px;
+    margin-left: 55px;
+    background-image: url("../img/search.svg");
+    background-repeat: no-repeat;
+}
+.header_search:hover {
+    transition: transform 1s;
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+.header__logo {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+/*--------Осн Информация-------------------------------------------------------*/
+.main {
+    flex: 1 1 auto;
+}
+.get-started__container {
+
+}
+.get-started__content {
+    height: 800px;
+    width: 320px;
+}
+.get-started__button {
+    display: flex;
+    flex-direction: column;
+    white-space: nowrap;
+    overflow-x: auto;
+    margin-top: 15px
+}
+.get-started__button a:hover {
+    color: #7E7E82;
+  }
+.get-started__repair {
+    display: block;
+    width: 300px;
+    padding: 15px 0 15px 24px;
+    cursor: pointer;
+    text-align: start;
+    color: black;
+    font-family: 'TTLakesMed';
+}
+.get-started__repair:hover::before {
+    content: '';
+    height: 32px;
+    width: 4px;
+    background-color: #41F6D7;  
+    border-radius: 0 3px 3px 0;
+    position: absolute;
+    top: 105px;
+    left: 0;
+}
+.get-started__services {
+    display: block;
+    padding: 15px 0 15px 24px;
+    cursor: pointer;
+    text-align: start;
+    color: black;
+    font-family: 'TTLakesMed';
+}
+.get-started__services:hover::after {
+    content: '';
+    height: 32px;
+    width: 4px;
+    background-color: #41F6D7;  
+    border-radius: 0 3px 3px 0;
+    position: absolute;
+    top: 155px;
+    left: 0;
+}
+.get-started__client {
+    display: block;
+    padding: 15px 0 15px 24px;
+    cursor: pointer;
+    text-align: start;
+    color: black;
+    font-family: 'TTLakesMed';
+}
+.get-started__client:hover::after {
+    content: '';
+    height: 32px;
+    width: 4px;
+    background-color: #41F6D7;  
+    border-radius: 0 3px 3px 0;
+    position: absolute;
+    top: 205px;
+    left: 0;
+}
+.get-started__sellers {
+    display: block;
+    padding: 15px 0 15px 24px;
+    cursor: pointer;
+    text-align: start;
+    color: black;
+    font-family: 'TTLakesMed';
+}
+.get-started__sellers:hover::after {
+    content: '';
+    height: 32px;
+    width: 4px;
+    background-color: #41F6D7;  
+    border-radius: 0 3px 3px 0;
+    position: absolute;
+    top: 255px;
+    left: 0;
+}
+.get-started__partners {
+    display: block;
+    padding: 15px 0 15px 24px;
+    cursor: pointer;
+    text-align: start;
+    color: black;
+    font-family: 'TTLakesMed';
+}
+.get-started__partners:hover::after {
+    content: '';
+    height: 32px;
+    width: 4px;
+    background-color: #41F6D7;  
+    border-radius: 0 3px 3px 0;
+    position: absolute;
+    top: 310px;
+    left: 0;
+}
+.get-started__manufacturer {
+    display: block;
+    padding: 15px 0 15px 24px;
+    cursor: pointer;
+    text-align: start;
+    color: black;
+    font-family: 'TTLakesMed';
+}
+.get-started__manufacturer:hover::after {
+    content: '';
+    height: 32px;
+    width: 4px;
+    background-color: #41F6D7;  
+    border-radius: 0 3px 3px 0;
+    position: absolute;
+    top: 360px;
+    left: 0;
+}
+.get-started__centers {
+    display: block;
+    padding: 15px 0 15px 24px;
+    cursor: pointer;
+    text-align: start;
+    color: black;
+    font-family: 'TTLakesMed';
+}
+.get-started__centers:hover::after {
+    content: '';
+    height: 32px;
+    width: 4px;
+    background-color: #41F6D7;  
+    border-radius: 0 3px 3px 0;
+    position: absolute;
+    top: 410px;
+    left: 0;
+}
+.get-started__contact {
+    display: block;
+    padding: 15px 0 15px 24px;
+    cursor: pointer;
+    text-align: start;
+    color: black;
+    font-family: 'TTLakesMed';
+}
+.get-started__contact:hover::after {
+    content: '';
+    height: 32px;
+    width: 4px;
+    background-color: #41F6D7;  
+    border-radius: 0 3px 3px 0;
+    position: absolute;
+    top: 465px;
+    left: 0;
+}
+.get-started__addbutton {
+    display: flex;
+    align-items: center;
+    min-height: 60px;
+    margin-top: 270px
+}
+.get-started__call {
+    width: 40px;
+    height: 40px;
+    margin-left: 24px;
+    background-image: url("../img/call.svg");
+    background-repeat: no-repeat;
+}
+.get-started__call:hover {
+    transition: transform 1s;
+    transform: rotate(100deg) scale(1.2);
+    opacity: 0.8;
+}
+.get-started__chat {
+    width: 40px;
+    height: 40px;
+    margin-left: 15px;
+    background-image: url("../img/chat.svg");
+    background-repeat: no-repeat;
+}
+.get-started__chat:hover {
+    transition: transform 1s;
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+.get-started__profile {
+    width: 40px;
+    height: 40px;
+    margin-left: 15px;
+    background-image: url("../img/profile.svg");
+    background-repeat: no-repeat;
+}
+.get-started__profile:hover {
+    transition: transform 1s;
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+/*--------Подвал-------------------------------------------------------*/
+.footer {
+    display: flex;
+    flex-direction: column;
+    white-space: nowrap;
+    overflow-x: auto;
+    height: 210px;
+}
+.footer__mail {
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px 0px 0px 24px;
+    font-size: 16px;
+    font-family: 'TTLakesMed';
+    text-decoration: none;
+}
+.footer__mail:hover {
+    text-decoration: underline;
+}
+.footer__number {
+    display: flex;
+    justify-content: flex-start;
+    padding: 15px 0px 0px 24px;
+    font-size: 24px;
+    font-family: 'TTLakesBold';
+    text-decoration: none;
+}
+.footer__number:hover {
+    text-decoration: underline;
+}
+.footer__language {
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 40px;
+    font-size: 16px;
+    font-family: 'TTLakesMed';
+}
+.footer__languageRu {
+    padding-left: 24px;
+    color: #7E7E82;
+}
+.footer__languageRu:hover {
+    color: #7E7E82;
+    text-decoration: underline;
+}
+.footer__languageEn {
+    padding-left: 10px;
+}
+.footer__languageEn:hover {
+    color: #7E7E82;
+    text-decoration: underline;
+}
+.footer__languageCh {
+    padding-left: 10px;
+}
+.footer__languageCh:hover {
+    color: #7E7E82;
+    text-decoration: underline;
+}
